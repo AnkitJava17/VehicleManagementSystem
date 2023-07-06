@@ -71,7 +71,6 @@ Windows OS
 
 
 ##  :camera: Gallery
-![flowchart1](https://github.com/AnkitJava17/VehicleManagementSystem/assets/136456814/0f0825e0-cc0a-446a-9062-c970975a938a)
 
 
 
