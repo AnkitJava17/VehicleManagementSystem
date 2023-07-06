@@ -1,0 +1,41 @@
+
+  .container {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .col-md-6 {
+    flex: 1;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  form {
+    margin-left: 20px;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .button-container {
+    margin-top: 20px;
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Add more CSS rules as needed */
+  

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="allCon">
+        <div class="heading">Your pick of rides at low prices</div>
+    
+    
+        <div>
+            <div id="output">
+    
+                <div *ngFor="let res of availableCars">
+    
+                    <p>Date: {{ res.carModel }}</p>
+                    <p>Number of Passengers: {{ res.carCapacity }}</p>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="cars-container">
+            <div class="car-container">
+                <div id="output">
+                    <mat-card *ngFor="let res of availableCars">
+                        <img src="{{ res.carImage }}" class="car-image" alt="Car Image">
+                        <mat-card-content>
+    
+                            <p><strong>Brand:</strong> {{ res.carBrand }}</p>
+                            <p><strong>Model:</strong> {{res.carModel}}</p>
+                            <p><strong>Number of Passengers:</strong> {{ res.carCapacity }}</p>
+                            <p><strong>Car Driver:</strong> {{res.carDriver}}</p>
+    
+    
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button class="btn btn-lg btn-dark btns" (click)="bookCar(res)">Book</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

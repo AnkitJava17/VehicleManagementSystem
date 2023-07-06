@@ -1,0 +1,65 @@
+<div>
+<div >
+    <div class="container ">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6">
+          <img src="../../../assets/loginAssets/login.jpg"
+            class="img-fluid" alt="Phone image">
+        </div>
+        <div class="col-md-6">
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input
+                  formControlName="username"
+                  name="username"
+                  required
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field>
+              <small
+      *ngIf="(loginFormControl['username'].touched && loginFormControl['username'].errors?.['required'])"
+     >
+     </small>
+
+     <br>
+     <br>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input
+                  formControlName="password"
+                  name="password"
+                  type="password"
+                  required
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field>
+              <small
+      *ngIf="(loginFormControl['password'].touched && loginFormControl['password'].errors?.['required'])"
+     >
+     </small>
+              
+  
+            <div class="d-flex justify-content-around align-items-center mb-4">
+              <!-- Checkbox -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                <label class="form-check-label" for="form1Example3"> Remember me </label>
+              </div>
+              <!-- <a href="#!">Forgot password?</a> -->
+              <a routerLink="/register" >New User? Click to Register!</a>
+            </div>
+  
+            <!-- Submit button -->
+            <div class="button-container">
+                <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+            </div>
+  
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div></div>

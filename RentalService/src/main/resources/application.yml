@@ -1,0 +1,12 @@
+server:
+  port: '8082'
+spring:
+  application:
+    name: rental-service
+  config:
+    import: configserver:http://localhost:8086
+  datasource:
+    url: jdbc:mysql://localhost:3306/rentalservice
+    password: Welcome@1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root

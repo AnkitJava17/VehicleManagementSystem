@@ -1,0 +1,107 @@
+    <div class="container">
+        <div class="img-container">
+            <img src="../../assets/rentAssets/rent.jpg" alt="">
+        </div>
+        <div class="heading">
+            <span class="head"> Fast And Effective Service</span><br>
+            <span class="sub">We let you pick the car that will ensure best trip ever!</span>
+        </div>
+        <div class="content">
+            <h3>SEARCH FROM</h3>
+            <span class="head">Looking for a Car/Bike? Location -> Pune/Mumbai</span>
+            <br><br>
+            <form>
+                <mat-form-field>
+                    <mat-label>Pick-Up City</mat-label>
+                    <!-- <mat-select>
+                        <mat-option name="location" id="location" *ngFor="let location of location"
+                            [value]="location">{{ location }}</mat-option>
+                    </mat-select> -->
+                    <input type="text" [(ngModel)]="location" matInput placeholder="Enter source location" id="location"
+                        name="location" class="form-control">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="space">
+                    <mat-label>Date From</mat-label>
+                    <input matInput [matDatepicker]="pickerFrom" [min]="minDate" placeholder="Choose a date"
+                        name="dateFrom">
+                    <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerFrom></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Date To</mat-label>
+                    <input matInput [matDatepicker]="pickerTo" [min]="minDate" placeholder="Choose a date"
+                        name="dateTo">
+                    <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerTo></mat-datepicker>
+                </mat-form-field>
+
+                <button type="button" class="btn btn-dark" (click)=" searchCars()">Search</button>
+            </form>
+        </div>
+    </div>
+    <!-- <div *ngFor="let res of availableCars">
+        <p>Car Details: {{ res.name }}{{res.model}}</p>
+        <p>Number of Passengers: {{ res.brand }}</p>
+        <p>Car Driver: {{res.capacity}}</p>
+    </div> -->
+
+    <div class="container">
+        <div class="car-container">
+            <mat-card *ngFor="let res of availableCars">
+                <!-- <img [src]="carImages[i]" class="car-image" alt="Car Image"> -->
+                <img src="{{ res.car_image }}" class="car-image" alt="Car Image">
+                <mat-card-content>
+                    <!-- <p>{{ rentCars.car_image }} </p> -->
+                    <p><strong>Name:</strong> {{ res.name }}</p>
+                    <p><strong>Model:</strong> {{ res.model }}</p>
+                    <p><strong>Brand:</strong> {{ res.brand}}</p>
+                    <p><strong>Year:</strong> {{ res.year }}</p>
+                    <p><strong>Capacity:</strong> {{ res.capacity }}</p>
+                    <p><strong>Hourly Charge:</strong> {{ res.hourlyCharge }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button class="btn btn-lg btn-dark btns" (click)="bookCar(res)">Book</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="bike-container">
+            <mat-card *ngFor="let bike of availableBikes">
+                <img src="{{ bike.bike_image }}" class="bike-image" alt="Bike Image">
+                <mat-card-content>
+                    <p><strong>Name:</strong> {{ bike.name }}</p>
+                    <p><strong> Model:</strong> {{ bike.model }}</p>
+                    <p><strong>Brand:</strong> {{ bike.brand}}</p>
+                    <p><strong> Year:</strong> {{ bike.year }}</p>
+
+
+                    <p><strong>Hourly Charge:</strong> {{ bike.hourlyCharge }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button class="btn btn-lg btn-dark btns" (click)="bookBikes(bike) ">Book</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+<div *ngIf="isDisabled">
+    <div class="available">Available cars</div>
+    <app-rent-cars></app-rent-cars>
+</div>
+
+
+<!-- <div class="available">Avaliable cars</div>
+<app-rent-cars [disabled]="isDisabled"></app-rent-cars> -->
+<div *ngIf="isDisabled">
+    <div class="available1">Avaliable Bikes</div>
+    <app-rent-bike></app-rent-bike>
+</div>
+
+
+
+<!-- <app-footer></app-footer> -->

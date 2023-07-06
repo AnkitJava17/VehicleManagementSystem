@@ -1,0 +1,128 @@
+
+
+
+   * {
+    transition: .33s ease all;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-family: 'Questrial', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  span {
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: #FF3434;
+    margin-bottom: 30px;
+  }
+  
+.main {
+  /* padding-top: 10px; */
+    height: 100vh;
+    /* margin-left: 50vh; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+  }
+  
+.container {
+  margin-left: 30vh;
+  /* margin-top: 100px; */
+  
+    background-color: white;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* margin: 30px; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+  }
+  
+  div.imag {
+    flex: 1;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  img.truck-image {
+    height: 100%;
+    width: 100%;
+  }
+  
+  div.text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 15px;
+  }
+  
+  p {
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  h2.brand {
+    margin: 30px 0 15px;
+  }
+  
+  p.model {
+    margin: 0;
+  }
+  
+  p.year {
+    margin: 15px 0 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+    div.container {
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    div.imag {
+      height: 300px;
+      width: auto;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+    }
+  
+    img.truck-image {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+  
+    div.text-container {
+      margin: 0 45px;
+      max-width: 100%;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    div.container {
+      max-width: 900px;
+    }
+  }
+  
+  

@@ -1,0 +1,347 @@
+<!--<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <mat-card>
+            <div class="container text-center">
+              <img src="../../../assets/logo.png" alt="" />
+            </div>
+  
+            <h1 class="text-center">Register Here !!</h1>
+  
+            {{ user | json }}  
+  
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                Username field  
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input
+                  required
+                  formControlName="username"  
+                  name="username"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <small
+          *ngIf="(registerFormControl['username'].touched && registerFormControl['username'].errors?.['required'])"
+        >
+          Name Required
+        </small>
+
+                <mat-hint>Username must be unique !!</mat-hint>
+              </mat-form-field>
+  
+               Password field 
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>User Password</mat-label>
+                <input
+                  required
+                  formControlName="password"
+                  name="password"
+                  type="password"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <small
+          *ngIf="(registerFormControl['password'].touched && registerFormControl['password'].errors?.['required'])"
+        >
+          Password required
+        </small>
+        <small *ngIf="(registerFormControl['password'].touched && registerFormControl['password'].value && !passwordValid())">
+            Password must contain a minimum of 8 characters and include at least one uppercase letter, one special character, and one numeric character.
+          </small>
+
+              </mat-form-field>
+  
+                first name 
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input
+                  required
+                  formControlName="firstName"
+                  name="firstName"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <small
+          *ngIf="(registerFormControl['firstName'].touched && registerFormControl['firstName'].errors?.['required'])"
+        >
+          firstName required
+        </small>
+
+              </mat-form-field> 
+  
+                lastName  
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input
+                  required
+                  formControlName="lastName"
+                  name="lastName"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <small
+                *ngIf="(registerFormControl['lastName'].touched && registerFormControl['lastName'].errors?.['required'])"
+              >
+                lastName required
+              </small>
+              </mat-form-field>
+  
+               email  
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input
+                  required
+                  formControlName="email"
+                  name="email"
+                  type="email"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <small
+                *ngIf="(registerFormControl['email'].touched && registerFormControl['email'].errors?.['required'])"
+              >
+                Email Required
+              </small>
+      
+              <small
+                *ngIf="(registerFormControl['email'].touched && registerFormControl['email'].errors?.['email'])"
+                >Email format not correct</small
+              >
+      
+              </mat-form-field>
+  
+                phone number  
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input
+                  required
+                  formControlName="phone"
+                  name="phone"
+                  type="text"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <small
+                *ngIf="(registerFormControl['phone'].touched && registerFormControl['phone'].errors?.['required'])"
+              >
+                phone Number required
+              </small>
+              <small
+              *ngIf="(registerFormControl['phone'].touched && registerFormControl['phone'].errors?.['minlength'])"
+            >
+              phone number should be of 10 digits.
+            </small>
+            <small
+              *ngIf="(registerFormControl['phone'].touched && registerFormControl['phone'].errors?.['maxlength'])"
+            >
+              Phone number should be of 10 digits.
+            </small>
+      
+              </mat-form-field>
+  
+              <div class="container text-center">
+                <button type="submit" mat-raised-button color="primary">
+                  Register
+                </button>
+                <button (click)="clearInput()"
+                  type="button"
+                  style="margin-left: 20px"
+                  mat-raised-button
+                  color="accent"
+                >
+                  Clear
+                </button>
+              </div>
+            </form>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>-->
+<section class="text-center">
+  <div
+    class="p-5 bg-image"
+    style="
+      background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+      height: 300px;
+    "
+  ></div>
+
+  <div
+    class="card mx-4 mx-md-5 shadow-5-strong"
+    style="
+      margin-top: -100px;
+      background: hsla(0, 0%, 100%, 0.8);
+      backdrop-filter: blur(30px);
+    "
+  >
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Register</h2>
+          <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <!-- Username -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>User Name</mat-label>
+                    <input
+                      required
+                      formControlName="username"
+                      name="username"
+                      matInput
+                      placeholder="Enter here"
+                    />
+                    <small
+                      *ngIf="(registerFormControl['username'].touched && registerFormControl['username'].errors?.['required'])"
+                    >
+                      Username Required
+                    </small>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <!-- Password -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>User Password</mat-label>
+                    <input
+                      required
+                      formControlName="password"
+                      name="password"
+                      type="password"
+                      matInput
+                      placeholder="Enter here"
+                    />
+                    <small
+                      *ngIf="(registerFormControl['password'].touched && registerFormControl['password'].errors?.['required'])"
+                    >
+                      Password required
+                    </small>
+                    <small
+                      *ngIf="
+                        registerFormControl['password'].touched &&
+                        registerFormControl['password'].value &&
+                        !passwordValid()
+                      "
+                    >
+                      Password must contain a minimum of 8 characters and
+                      include at least one uppercase letter, one special
+                      character, and one numeric character.
+                    </small>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <!-- FirstName -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input
+                      required
+                      formControlName="firstName"
+                      name="firstName"
+                      matInput
+                      placeholder="Enter here"
+                    />
+                    <small
+                      *ngIf="(registerFormControl['firstName'].touched && registerFormControl['firstName'].errors?.['required'])"
+                    >
+                      FirstName required
+                    </small>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <!-- LastName -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input
+                      required
+                      formControlName="lastName"
+                      name="lastName"
+                      matInput
+                      placeholder="Enter here"
+                    />
+                    <small
+                      *ngIf="(registerFormControl['lastName'].touched && registerFormControl['lastName'].errors?.['required'])"
+                    >
+                      LastName required
+                    </small>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <!-- Email Address -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email Address</mat-label>
+                    <input
+                      required
+                      formControlName="email"
+                      name="email"
+                      type="email"
+                      matInput
+                      placeholder="Enter here"
+                    />
+                    <small
+                      *ngIf="(registerFormControl['email'].touched && registerFormControl['email'].errors?.['required'])"
+                    >
+                      Email Required
+                    </small>
+
+                    <small
+                      *ngIf="(registerFormControl['email'].touched && registerFormControl['email'].errors?.['email'])"
+                      >Email format not correct</small
+                    >
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <!-- Phone Number -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input
+                      required
+                      formControlName="phone"
+                      name="phone"
+                      type="text"
+                      matInput
+                      placeholder="Enter here"
+                    />
+                    <small
+                      *ngIf="(registerFormControl['phone'].touched && registerFormControl['phone'].errors?.['required'])"
+                    >
+                      phone Number required
+                    </small>
+                    <small
+                      *ngIf="(registerFormControl['phone'].touched && registerFormControl['phone'].errors?.['minlength'])"
+                    >
+                      phone number should be of 10 digits.
+                    </small>
+                    <small
+                      *ngIf="(registerFormControl['phone'].touched && registerFormControl['phone'].errors?.['maxlength'])"
+                    >
+                      Phone number should be of 10 digits.
+                    </small>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+              Register
+            </button>
+            <div class="text-center">
+              <a routerLink="/login">Already a User? Click to Login!</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

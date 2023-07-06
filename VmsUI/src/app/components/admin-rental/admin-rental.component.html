@@ -1,0 +1,59 @@
+<h2>All Bikes</h2>
+<ul>
+  <li *ngFor="let bike of bikes">{{ bike.name }}</li>
+</ul>
+
+<h2>All Cars</h2>
+<ul>
+  <li *ngFor="let car of cars">{{ car.name }}</li>
+</ul>
+
+<h2>Rent Details</h2>
+<table>
+  <tr>
+    <th>Vehicle</th>
+    <th>Rent Duration</th>
+    <th>Customer Name</th>
+  </tr>
+  <tr *ngFor="let detail of rentDetails">
+    <td>{{ detail.vehicleName }}</td>
+    <td>{{ detail.rentDuration }}</td>
+    <td>{{ detail.customerName }}</td>
+  </tr>
+</table>
+
+<h2>Add Bike</h2>
+<form (ngSubmit)="addBike()">
+  <label for="bikeName">Bike Name</label>
+  <input type="text" id="bikeName" name="bikeName" ngModel required>
+
+  <label for="bikeType">Bike Type</label>
+  <input type="text" id="bikeType" name="bikeType" ngModel required>
+
+  <button type="submit">Add Bike</button>
+</form>
+
+<h2>Add Car</h2>
+<form (ngSubmit)="addCar()">
+  <label for="carName">Car Name</label>
+  <input type="text" id="carName" name="carName" ngModel required>
+
+  <label for="carType">Car Type</label>
+  <input type="text" id="carType" name="carType" ngModel required>
+
+  <button type="submit">Add Car</button>
+</form>
+
+<h2>Add Rent Details</h2>
+<form (ngSubmit)="addInfo()">
+  <label for="vehicleName">Vehicle Name</label>
+  <input type="text" id="vehicleName" name="vehicleName" ngModel required>
+
+  <label for="rentDuration">Rent Duration</label>
+  <input type="text" id="rentDuration" name="rentDuration" ngModel required>
+
+  <label for="customerName">Customer Name</label>
+  <input type="text" id="customerName" name="customerName" ngModel required>
+
+  <button type="submit">Add Rent Details</button>
+</form>

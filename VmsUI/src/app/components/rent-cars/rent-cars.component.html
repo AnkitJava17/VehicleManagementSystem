@@ -1,0 +1,49 @@
+<div class="container">
+    <h3>Available Cars</h3>
+    <div class="car-container">
+        <mat-card *ngFor="let rentCars of availableCars">
+            <!-- <img [src]="carImages[i]" class="car-image" alt="Car Image"> -->
+            <img src="{{ rentCars.car_image }}" class="car-image" alt="Car Image">
+            <mat-card-content>
+                <!-- <p>{{ rentCars.car_image }} </p> -->
+                <p><strong>Name:</strong> {{ rentCars.name }}</p>
+                <p><strong>Model:</strong> {{ rentCars.model }}</p>
+                <p><strong>Brand:</strong> {{ rentCars.brand}}</p>
+                <p><strong>Year:</strong> {{ rentCars.year }}</p>
+                <p><strong>Capacity:</strong> {{ rentCars.capacity }}</p>
+                <p><strong>Hourly Charge:</strong> {{ rentCars.hourlyCharge }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button class="btn btn-lg btn-dark btns" (click)="bookCar(rentCars)">Book</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+<!-- <div class="content-section implementation carousel-demo">
+
+    <div class="card">
+        <p-carousel [value]="images" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+            [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
+            <ng-template let-image pTemplate="item">
+                <div class="item card">
+                
+                        <mat-card *ngFor="let rentCars of availableCars; let i = index">
+                            <img [src]="carImages[i]" class="car-image" alt="Car Image">
+                            <mat-card-content>
+                                <p>Name: {{ rentCars.name }}</p>
+                                <p>Model: {{ rentCars.model }}</p>
+                                <p>Brand: {{ rentCars.brand}}</p>
+                                <p> Year: {{ rentCars.year }}</p>
+                                <p>Image: {{ rentCars.car_image }}</p>
+                                <p>Capacity: {{ rentCars.capacity }}</p>
+                                <p>hourlyCharge: {{ rentCars.hourlyCharge }}</p>
+                            </mat-card-content>
+                           
+                        </mat-card>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div> -->

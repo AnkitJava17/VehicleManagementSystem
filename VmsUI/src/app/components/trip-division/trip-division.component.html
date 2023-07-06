@@ -1,0 +1,64 @@
+<body>
+  <!-- <div class="wholepage"> -->
+    <div class="container"><div class="heading">
+      <!-- <span class="head">Truck Trips Made Easy</span><br> -->
+      <span class="sub">"Your Road to Reliable Transportation"</span>
+    </div>
+      <div class="image-section">
+        <img src="../../../assets/tripAssets/img1.jpg" class="background-image" alt="Background Image" />
+        <div class="arrow-container">
+          <a (click)="scrollToBanner()">
+            <i class="material-icons arrow-icon">keyboard_arrow_down</i>
+          </a>
+        </div>
+        <div class="text-overlay">
+          <span class="text-overlay-content">Truck Trips Made Easy</span><br>
+          <div class="sub-overlay">
+          <span class="sub-overlay-content">"Your Road to Reliable Transportation"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img src="../../../assets/tripAssets/truck.png" alt=""> -->
+    <div class="banner" id="bannerSection">
+      <div class="head">Don't Drink and Drive.</div>
+      <span class="subheading">Looking for a trip?</span>
+    </div>
+    <div class="img-book-truck">
+    <img class="img-book-truck" src="../../../assets/tripAssets/truckimg.jpg">
+    <div class="text-overlay-book">
+            <span class="text-overlay-content-book">Book a truck!</span><br>
+    </div>
+    </div>
+    <div class="banner2" id="banner2Section">
+      <div class="head">When we share a truck service, we unlock the power of collaboration and create a network of efficiency.</div>
+      <!-- <span class="subheading">Don't Drink and Drive. Nazar hati durghatna ghati!</span> -->
+    </div>
+        <div class="container">
+      <div class="cards-section" id="cardsSection">
+        <div class="cards-container">
+    <div class="cards-container">
+      <!-- <mat-card *ngFor="let card of cards" class="card" [ngClass]="{'card--unclickable': !isClickable || card.isDisabled}" (click)="toTripDivisionForm(card)">
+        <img src="{{ card.truck_image }}" class="card-image" alt="Card Image" /> -->
+        <mat-card *ngFor="let card of cards" class="card" (click)="toTripDivisionForm(card)">
+          <img src="{{ card.truck_image }}" class="card-image" alt="Card Image" />
+        <mat-card-content>
+          <mat-card-title><strong>Brand:</strong> {{ card.truck_brand }}</mat-card-title>
+          <mat-card-title><strong>Model:</strong> {{ card.truck_model }}</mat-card-title>
+          <mat-card-title><strong>Year:</strong> {{ card.truck_year }}</mat-card-title>
+          <mat-card-title><strong>Source:</strong> {{ card.truck_source }}</mat-card-title>
+          <mat-card-title><strong>Destination:</strong> {{ card.truck_destination }}</mat-card-title>
+          <mat-card-title><strong>Total Distance:</strong> {{ card.truck_distance }}</mat-card-title>
+          <!-- <mat-card-subtitle>{{ card.truck_model }}</mat-card-subtitle>
+          <p class="card-description">{{ card.truck_year }}</p>
+          <button mat-button>Button</button> -->
+          <!-- <button mat-raised-button class="custom-button" (click)="toTripDivisionForm()" >Choose</button> -->
+      <!-- <button (click)="toTripDivisionForm()">temp </button>     -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div></div>
+  <!-- </div> -->
+  <router-outlet></router-outlet>
+</body>

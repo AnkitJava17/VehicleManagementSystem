@@ -1,0 +1,64 @@
+
+<div class="hel">
+  
+   <div class="container" id="trip-container">
+  <h1>Plan Your Trip</h1>
+  <form [formGroup]="tripForm" (ngSubmit)="submitTrip() ">
+    <mat-form-field>
+      <input matInput placeholder="Source" formControlName="source">
+      <mat-error *ngIf="tripForm.controls['source'].hasError('required')">Source is required</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Destination" formControlName="destination">
+      <mat-error *ngIf="tripForm.controls['destination'].hasError('required')">Destination is required</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput [matDatepicker]="startDatePicker" placeholder="Start Date" formControlName="startDate">
+      <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #startDatePicker></mat-datepicker>
+      <mat-error *ngIf="tripForm.controls['startDate'].hasError('required')">Start Date is required</mat-error>
+      <mat-error *ngIf="tripForm.controls['startDate'].hasError('pastDate')">Start Date cannot be in the past</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput [matDatepicker]="endDatePicker" placeholder="End Date" formControlName="endDate">
+      <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #endDatePicker></mat-datepicker>
+      <mat-error *ngIf="tripForm.controls['endDate'].hasError('required')">End Date is required</mat-error>
+      <mat-error *ngIf="tripForm.controls['endDate'].hasError('pastDate')">End Date cannot be in the past</mat-error>
+      <mat-error *ngIf="tripForm.controls['endDate'].hasError('endDateBeforeStartDate')">End Date must be after Start Date</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <!-- <mat-label>Distance</mat-label> -->
+      <input matInput placeholder="Total Distance" formControlName="totalDistance">
+      <mat-error *ngIf="tripForm.controls['totalDistance'].hasError('required')">Total Distance is required</mat-error>
+      <mat-error *ngIf="tripForm.get('totalDistance')?.hasError('min')">Minimum distance should be more than 100</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Start Time</mat-label>
+      <input matInput type="time" placeholder="Start Time" formControlName="startTime">
+      <mat-error *ngIf="tripForm.controls['startTime'].hasError('required')">Start Time is required</mat-error>
+    </mat-form-field>
+    
+    <!-- <mat-form-field>
+      <input matInput type="file" (change)="handleFileInput($event)">
+    </mat-form-field>
+    -->
+    <!-- <mat-form-field></mat-form-field> -->
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" >Submit</button>
+    </div>
+
+    <!-- <div class="btn_main">
+      <div class="contact_bt" (click)="toLogin()"><a>Read More</a></div>
+  </div> -->
+
+    <!-- <button mat-raised-button color="primary" type="submit" [disabled]="tripForm.invalid">Submit</button> -->
+   </form>
+
+    </div>
+  </div>

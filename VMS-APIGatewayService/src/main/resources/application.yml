@@ -1,0 +1,42 @@
+server:
+  port: '8084'
+
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: configserver:http://localhost:8086
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+          corsConfigurations:
+            '[/**]':
+                allowedOrigins: "*"
+                allowedMethods: "*"
+                allowedHeaders: "*"
+      routes:
+        - id: user-service
+          uri: http://user-service
+          predicates:
+            - Path=/user/**
+          filters:
+            - AuthenticationFilter
+
+        - id: ride-sharing-service
+          uri: lb://ride-sharing-service
+          predicates:
+            - Path=/api/rides/**
+          filters:
+            - AuthenticationFilter
+
+        - id: rental-service
+          uri: lb://rental-service
+          predicates:
+            - Path=/api/rentals/**
+          filters:
+            - AuthenticationFilter
+
+
+

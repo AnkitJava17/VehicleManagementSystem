@@ -1,0 +1,11 @@
+server:
+  port: '8080'
+spring:
+  application:
+    name: admin-service
+  config:
+    import: configserver:http://localhost:8086
+  datasource:
+    url: jdbc:mysql://localhost:3306/adminservice
+    password: Welcome@1
+    username: root

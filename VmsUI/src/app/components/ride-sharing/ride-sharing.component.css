@@ -1,0 +1,238 @@
+.heading {
+    background-color: #fe5b29;
+    font-size: 27px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 30px; */
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    align-content: center;
+    font-weight: 150;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif
+}
+
+/* Maps */
+#googleMap {
+    margin-top: 5px;
+
+    height: 450px;
+    width: 100vh;
+
+}
+
+#goodleMap:hover {
+    transform: scale(1.1);
+}
+
+/*=========== Ride search form ====================*/
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mat-card {
+    width: 700px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-side {
+    flex: 1;
+}
+
+.right-side {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.searchButton {
+    background-color: #fe5b29;
+    color: #FFFFF9;
+}
+
+/* Grid-list */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.column {
+    flex-basis: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column:hover {
+    transform: scale(1.1);
+}
+
+.icons img {
+    width: 100px;
+    height: 100px;
+}
+
+/* learn-more */
+
+/* Learn-more */
+.learn-more {
+    background-color: #fe5b29;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    flex-wrap: wrap;
+
+}
+
+.learnButton {
+    background-color: black;
+    color: rgb(14, 14, 14);
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+
+}
+
+.learn-more .people img {
+    height: 20em;
+    width: 20em;
+    padding: 10px;
+    max-width: 100%;
+
+}
+
+/* help-centre */
+.help-centre h1 {
+    position: relative;
+    left: 35%;
+}
+
+.help-centre .row {
+    padding-left: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    /* align-items: center;
+    align-content: center; */
+}
+
+.help-centre .column {
+    width: 40%;
+}
+
+
+/* Media queries for responsiveness */
+
+/* Small screens */
+@media (max-width: 576px) {
+    .mat-card {
+        width: 100%;
+    }
+
+    .left-side,
+    .right-side {
+        padding: 10px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .container1 {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .mat-card {
+        width: 90%;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        padding: 20px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+    .container1 {
+        height: 100vh;
+    }
+
+    .mat-card {
+        width: 800px;
+    }
+}
+
+
+.car-image {
+    height: 200px;
+    width: 300px;
+
+    object-fit: cover;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 0;
+}
+
+.car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
+
+}
+
+.car-image:hover {
+    transform: scale(1.5);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  
+
+  

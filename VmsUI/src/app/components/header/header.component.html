@@ -1,0 +1,27 @@
+
+
+<div class="">
+  <div class="header_section">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar brand and toggler code -->
+        <a class="navbar-brand" (click)="toDashboard()"
+          ><img src="../../assets/headerAssets/logo.png"
+        /></a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto nav-gap">
+            <li class="nav-item"><a routerLink="/dash-board" mat-icon-button class="example-icon favorite-icon mr-3" aria-label="Home">Home</a></li>
+            <li class="nav-item"><a routerLink="/about-us" mat-icon-button class="example-icon favorite-icon mr-3" aria-label="About">About</a></li>
+            <!-- <li class="nav-item"><a routerLink="/services" mat-icon-button class="example-icon favorite-icon mr-3" aria-label="Services">Services</a></li> -->
+            <li class="nav-item"><a routerLink="/contact-us" mat-icon-button class="example-icon favorite-icon mr-3" aria-label="Contact">Contact</a></li>
+            <li class="nav-item"><a (click)="logout()" *ngIf="isLoggedIn" mat-icon-button class="example-icon favorite-icon mr-3" aria-label="Logout">Logout</a></li>
+            <li class="nav-item"><a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Login">Login</a></li>
+            <li class="nav-item"><a *ngIf="isLoggedIn" [routerLink]="'/dash-services'" mat-icon-button class="example-icon favorite-icon" aria-label="Dash">Services</a></li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

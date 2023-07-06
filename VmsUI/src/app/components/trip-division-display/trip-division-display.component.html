@@ -1,0 +1,155 @@
+<!-- <p>trip-division-display works!</p>
+<div>
+<h1>{{info.source}}</h1>
+<h1>{{info.destination}}</h1>
+<h1>{{info.start_date}}</h1>
+<h1>{{info.end_date}}</h1>
+<h1>{{info.total_distance}}</h1>
+<h1>{{info.start_time}}</h1>
+<h1>{{info.division_image}}</h1>
+<img src="{{card.truck_image}}">
+<h1>{{card.truck_brand}}</h1>
+<h1>{{card.truck_model}}</h1>
+<h1>{{card.truck_year}}</h1>
+</div> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="trip-division-display.component.css">
+  <title>Truck Information</title>
+</head>
+<body>
+  <div class="container">
+    <div class="info-section">
+      <h1>{{info.source}}</h1>
+      <h1>{{info.destination}}</h1>
+      <h1>{{info.startDate}}</h1>
+      <h1>{{info.endDate}}</h1>
+      <h1>{{info.totalDistance}}</h1>
+      <h1>{{info.startTime}}</h1>
+      <h1>{{info.division_image}}</h1>
+      <img src="{{card.truck_image}}">
+    </div>
+    <div class="truck-section">
+      <h1>{{card.truck_brand}}</h1>
+      <h1>{{card.truck_model}}</h1>
+      <h1>{{card.truck_year}}</h1>
+    </div>
+  </div>
+</body>
+</html> -->
+
+<!-- <div class="truck-info">
+    
+    <div class="trip-details">
+        <h2>Details</h2>
+      <h1 class="title">{{info.source}} - {{info.destination}}</h1>
+      <p class="date">Start Date: {{info.startDate}}</p>
+      <p class="date">End Date: {{info.endDate}}</p>
+      <p class="distance">Total Distance: {{info.totalDistance}}</p>
+      <p class="start-time">Start Time: {{info.startTime}}</p>
+      <p class="division-image">Division Image: {{info.division_image}}</p>
+    </div>
+    <div class="truck-details">
+      <img class="truck-image" src="{{card.truck_image}}" alt="Truck Image">
+      <h2 class="brand">{{card.truck_brand}}</h2>
+      <p class="model">{{card.truck_model}}</p>
+      <p class="year">Year: {{card.truck_year}}</p>
+    </div>
+  </div>
+   -->
+
+   <!-- <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Responsive card design with link hover effect</title>  
+      <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="trip-division-display.component.css"> 
+    </head>
+    <body> -->
+      <!-- <div class="main">
+        <div class="container">
+          <div class="imag">
+            <img class="truck-image" src="{{card.truck_image}}" alt="Truck Image">
+          </div>
+          <div class="text-container">
+            <span></span>
+            <h1>{{info.source}} - {{info.destination}}</h1>
+            <p class="date">Start Date: {{info.startDate}}</p>
+            <p class="date">End Date: {{info.endDate}}</p>
+            <p class="distance">Total Distance: {{info.totalDistance}}</p>
+            <p class="start-time">Start Time: {{info.startTime}}</p>
+            <p class="division-image">Division Image: {{info.division_image}}</p>
+            <h2 class="brand">{{card.truck_brand}}</h2>
+            <p class="model">{{card.truck_model}}</p>
+            <p class="year">Year: {{card.truck_year}}</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="main">
+        <div class="container">
+          <div class="imag">
+            <img class="truck-image" [src]="card.truck_image" alt="Truck Image">
+          </div>
+          <div class="text-container">
+            <span></span>
+            <h1>{{ info.source }} - {{ info.destination }}</h1>
+            <p class="date">Start Date: {{ info.startDate }}</p>
+            <p class="date">End Date: {{ info.endDate }}</p>
+            <p class="distance">Total Distance: {{ info.totalDistance }}</p>
+            <p class="start-time">Start Time: {{ info.startTime }}</p>
+            <p class="division-image">Division Image: {{ info.division_image }}</p>
+            <h2 class="brand">{{ card.truck_brand }}</h2>
+            <p class="model">{{ card.truck_model }}</p>
+            <p class="year">Year: {{ card.truck_year }}</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </body>
+    </html> -->
+    
+
+    <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive card design with link hover effect</title>  
+  <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="trip-division-display.component.css"> 
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="imag">
+        <img class="truck-image" [src]="card.truck_image" alt="Truck Image">
+      </div>
+      <div class="text-container">
+        <span></span>
+        <h1>{{ info.source }} - {{ info.destination }}</h1>
+        <!-- <p class="date">Start Date: {{ info.startDate }}</p> -->
+        <!-- <p class="date">End Date: {{ info.endDate }}</p> -->
+        <p class="date">Start Date: {{ info.startDate | date:'dd-MM-yyyy' }}</p>
+        <p class="date">End Date: {{ info.endDate | date:'dd-MM-yyyy' }}</p>
+
+        
+        <!-- <p class="date">Start Date: {{ info.startDate }}</p>
+        <p class="date">End Date: {{ info.endDate }}</p> -->
+
+        <p class="distance">Total Distance: {{ info.totalDistance }}</p>
+        <p class="start-time">Start Time: {{ info.startTime }}</p>
+        <!-- <p class="division-image">Division Image: {{ info.division_image }}</p> -->
+        <h2 class="brand">Truck Brand: {{ card.truck_brand }}</h2>
+        <p class="model">Truck Model: {{ card.truck_model }}</p>
+        <p class="year">Year: {{ card.truck_year }}</p>
+        <p class="amount">Amount: {{ info.totalDistance * 2}}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

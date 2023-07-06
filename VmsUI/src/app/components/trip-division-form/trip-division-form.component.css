@@ -1,0 +1,217 @@
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #FF4B2B;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  align-self: center;
+}
+
+button[type="submit"]:hover {
+  background-color: #E63C1E;
+}
+
+.validation-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  white-space: normal;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.hel{
+  padding-top: 30vh;
+  padding-bottom: 10vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  /* margin-top: 100px; */
+  padding: 20px;
+  background-color: #f4f4f4;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  position: relative;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+	min-height: 450px;
+
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="file"],
+input[matInput] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+mat-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  padding: 10;
+  white-space: normal;
+  /* width: max-content; */
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button[type="submit"] {
+  background-color: #FF4B2B;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #E63C1E;
+}
+
+
+
+.btn_main {
+    width: 100%;
+    float: center;
+    padding-top: 40px;
+}
+.contact_bt {
+    width: 175px;
+    float: center;
+}
+.contact_bt a {
+    width: 100%;
+    float: center;
+    font-size: 18px;
+    background-color: #FE5B29;
+    color: #FCF8F8;
+    text-align: center;
+    padding: 10px;
+}
+.contact_bt a:hover {
+    color: #FCF8F8;
+    background-color: #363636;
+}
+.contact_bt.active a {
+    color: #FCF8F8;
+    background-color: #363636;
+    margin-left: 10px;
+}
