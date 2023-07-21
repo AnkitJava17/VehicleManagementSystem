@@ -1,11 +1,6 @@
 package com.share.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.*;
 import java.util.List;
 
 @Entity
@@ -106,9 +101,9 @@ public class RideShare {
 
     public RideShare(){};
 
-    // Constructor
+    
     public RideShare(int ride_ID, String ride_source, String ride_destination, String departure_time,
-                     String arrival_time, int ride_duration, float ride_km, float ride_rate) {
+                     String arrival_time, int ride_duration, float ride_km, float ride_rate, List<Car> cars) {
         this.ride_ID = ride_ID;
         this.ride_source = ride_source;
         this.ride_destination = ride_destination;
@@ -117,6 +112,7 @@ public class RideShare {
         this.ride_duration = ride_duration;
         this.ride_km = ride_km;
         this.ride_rate = ride_rate;
+        this.cars = cars;
     }
 
     @Override

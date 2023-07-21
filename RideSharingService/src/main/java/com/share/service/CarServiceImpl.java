@@ -1,6 +1,5 @@
 package com.share.service;
 
-
 import com.share.model.Car;
 import com.share.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,6 @@ public class CarServiceImpl implements CarService {
         return carRepository.findByRideShareId(rideShareId);
     }
 
-
     @Override
     public Car saveCar(Car car) {
         return carRepository.save(car);
@@ -49,8 +47,8 @@ public class CarServiceImpl implements CarService {
     public List<Car> getAvailableCarsByDateAndPassengers(String destination, int passengers) {
         List<Car> cars = carRepository.findByDestAndCapacity(destination, passengers);
         List<Car> res = new ArrayList<>();
-        for (Car car: cars){
-            if (car.isAvailable()){
+        for (Car car : cars) {
+            if (car.isAvailable()) {
                 res.add(car);
             }
         }

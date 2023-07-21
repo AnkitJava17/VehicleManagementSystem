@@ -7,5 +7,5 @@ spring:
     import: configserver:http://localhost:8086
   datasource:
     url: jdbc:mysql://localhost:3306/adminservice
-    password: Welcome@1
+    password: Kajal@123
     username: root

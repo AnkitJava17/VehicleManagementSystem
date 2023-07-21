@@ -13,13 +13,12 @@ import java.util.List;
 public interface CarRepository extends JpaRepository<Car,Integer> {
     public Iterable<Car> findByAvailableTrue();
 
-    @Query("select c from Car c join RideShare r where c.carCapacity > ?2 and r.ride_destination=?1")
+    @Query("select c from Car c join RideShare r on c.rideId=r.ride_ID where c.carCapacity >= ?2 and r.ride_destination=?1")
     public List<Car> findByDestAndCapacity(String destination, int carCapacity);
 
-//    public Car findById(int carId);
 
-    @Query("SELECT c FROM Car c WHERE c.rideShare.id = :rideId")
-    List<Car> findByRideShareId(@Param("rideId") int rideId);
+    @Query("SELECT c FROM Car c WHERE c.rideId = ?1")
+    List<Car> findByRideShareId(int rideId);
 
-//    public List<Car> findByRideShareId(int ride_ID);
+
 }

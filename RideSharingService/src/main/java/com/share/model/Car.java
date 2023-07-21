@@ -23,17 +23,15 @@ public class Car {
     private String carImage;
 
     private String carDriver;
+    
+    private int rideId;
 
-    @ManyToOne
-    @JoinColumn(name = "ride_ID")
-    private RideShare rideShare;
-
-    public RideShare getRideShare() {
-        return rideShare;
+    public int getRideId() {
+        return rideId;
     }
 
-    public void setRideShare(RideShare rideShare) {
-        this.rideShare = rideShare;
+    public void setRideId(int rideId) {
+        this.rideId = rideId;
     }
 
     public int getCarId() {
@@ -104,7 +102,7 @@ public class Car {
     };
 
     public Car(int carId, String carModel, String carBrand, int carYear, boolean available,
-            int carCapacity, String carImage, String carDriver, RideShare rideShare) {
+            int carCapacity, String carImage, String carDriver, int rideId) {
         this.carId = carId;
         this.carModel = carModel;
         this.carBrand = carBrand;
@@ -113,7 +111,7 @@ public class Car {
         this.carCapacity = carCapacity;
         this.carImage = carImage;
         this.carDriver = carDriver;
-        this.rideShare = rideShare;
+        this.rideId = rideId;
     }
 
     @Override
