@@ -1,0 +1,4 @@
+FROM openjdk:17-alpine
+EXPOSE 8082
+ADD RentalService.jar RentalService.jar
+ENTRYPOINT [ "java","jar","RentalService.jar" ]
